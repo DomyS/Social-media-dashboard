@@ -48,7 +48,7 @@ class App extends React.Component {
           <p>Total Followers: 23,004</p>
         </div>
         <div className="button">
-          <p>Light Mode</p>
+          <p>Dark Mode</p>
           <label className="switch">
             <input
               type="checkbox"
