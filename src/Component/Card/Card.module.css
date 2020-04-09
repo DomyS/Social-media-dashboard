@@ -1,0 +1,100 @@
+html {
+  --background: hsl(0, 0%, 100%);
+  --topBG: hsl(225, 100%, 98%);
+  --CardBg: hsl(227, 47%, 96%);
+  --textColor: hsl(228, 12%, 44%);
+  --Text: hsl(230, 17%, 14%);
+  --button: hsl(230, 22%, 74%);
+  --limeGreen: hsl(163, 72%, 41%);
+  --brightRed: hsl(356, 69%, 56%);
+}
+
+html[data-theme="dark"] {
+  --background: hsl(230, 17%, 14%);
+  --topBg: hsl(232, 19%, 15%);
+  --CardBg: hsl(228, 28%, 20%);
+  --textColor: hsl(228, 34%, 66%);
+  --Text: hsl(0, 0%, 100%);
+}
+
+.card {
+  position: relative;
+  background: var(--CardBg);
+  width: 300px;
+  border-radius: 5px;
+  color: var(--Text);
+  margin: 10px 20px 10px 0px;
+}
+.upperCaret2 {
+  width: 4em;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  color: var(--limeGreen);
+}
+.lowerCaret2 {
+  width: 4em;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  color: var(--brightRed);
+}
+.iconName {
+  position: relative;
+  color: var(--textColor);
+  top: 25px;
+  font-weight: 700;
+}
+.iconName span {
+  position: relative;
+  margin-right: 5px;
+}
+.iconName2 {
+  color: var(--textColor);
+  font-weight: 700;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding: 0 25px;
+}
+h3 {
+  text-transform: uppercase;
+  color: var(--textColor);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 8px;
+  margin-top: -50px;
+}
+h2 {
+  font-size: 60px;
+  margin-top: 40px;
+}
+.lowerText {
+  top: 25px;
+}
+.upperCaret {
+  width: 7em;
+  justify-content: space-evenly;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  color: var(--limeGreen);
+}
+.lowerCaret {
+  width: 7em;
+  justify-content: space-evenly;
+  text-align: center;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  color: var(--brightRed);
+}
+
+@media only screen and (max-width: 400px) {
+  .card {
+    margin: 15px auto;
+  }
+}

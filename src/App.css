@@ -1,38 +1,170 @@
+html {
+  --background: hsl(0, 0%, 100%);
+  --topBG: hsl(225, 100%, 98%);
+  --CardBg: hsl(227, 47%, 96%);
+  --textColor: hsl(228, 12%, 44%);
+  --Text: hsl(230, 17%, 14%);
+  --button: hsl(230, 22%, 74%);
+}
+
+html[data-theme="dark"] {
+  --background: hsl(230, 17%, 14%);
+  --topBg: hsl(232, 19%, 15%);
+  --CardBg: hsl(228, 28%, 20%);
+  --textColor: hsl(228, 34%, 66%);
+  --Text: hsl(0, 0%, 100%);
+}
+
+.cardContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cardContainer2 {
+  margin-top: -30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  background: var(--background);
+  font-family: "Inter", sans-serif;
+}
 .App {
+  /*position: relative;*/
+  font-family: "Inter", sans-serif;
+  max-width: 80em;
+  margin: 30px auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fa {
+  font-size: 25px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fa-instagram {
+  background-image: linear-gradient(
+    to right,
+    #fdc468,
+    #ffa263,
+    #ff806c,
+    #f9607f,
+    #df4996
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  color: var(--Text);
+  margin: 4% 0;
+  float: left;
+}
+.texts {
+  color: var(--Text);
+  font-family: "Inter", sans-serif;
+  float: left;
   display: flex;
   flex-direction: column;
+  line-height: 1px;
+}
+.texts p {
+  font-weight: 700;
+  color: var(--textColor);
+}
+.button {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  float: right;
+  width: 10em;
+  justify-content: space-evenly;
+}
+.button p {
+  font-weight: 700;
+  color: var(--textColor);
+}
+.texts {
+  position: relative;
+  display: flex;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--button);
+  animation: 0.4s;
+  -webkit-animation: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 35px;
+  bottom: 3px;
+  background-color: var(--topBG);
+  animation: 0.4s;
+  -webkit-animation: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-image: linear-gradient(
+    to right,
+    #378fe6,
+    #00a9f0,
+    #00bfde,
+    #00cfb6,
+    #3eda82
+  );
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(-31px);
+  -ms-transform: translateX(-31px);
+  transform: translateX(-31px);
+}
+.slider.round {
+  border-radius: 34px;
 }
 
-.App-link {
-  color: #61dafb;
+.slider.round:before {
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 22px;
   }
-  to {
-    transform: rotate(360deg);
+  .texts {
+    position: relative;
+    width: 18em;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .Overview {
+    margin-left: 35px;
+  }
+  .button {
+    position: relative;
+    width: 18em;
+    float: none;
+    margin: 0 auto;
+    justify-content: space-between;
   }
 }
